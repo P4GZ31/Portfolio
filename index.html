@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaypee C. Consuelo - AI Operations Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-background"></div>
+    
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4">
+            <div class="nav-glass rounded-lg px-6 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="text-xl font-bold text-gradient">JC</div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#home" class="nav-link">Home</a>
+                        <a href="#about" class="nav-link">About</a>
+                        <a href="#skills" class="nav-link">Skills</a>
+                        <a href="#experience" class="nav-link">Experience</a>
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </div>
+                    <button class="md:hidden text-white" id="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-40 hidden" id="mobile-menu">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#home" class="mobile-nav-link text-2xl">Home</a>
+            <a href="#about" class="mobile-nav-link text-2xl">About</a>
+            <a href="#skills" class="mobile-nav-link text-2xl">Skills</a>
+            <a href="#experience" class="mobile-nav-link text-2xl">Experience</a>
+            <a href="#contact" class="mobile-nav-link text-2xl">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative">
+        <!-- Background Video -->
+        <video class="hero-background-video" autoplay muted loop>
+            <source src="attached_assets/ScreenRecording_06-19-2025 21-51-14_1_1750510400091.mov" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="fade-in">
+                <!-- Profile Picture -->
+                <div class="profile-picture-container mb-8">
+                    <img src="attached_assets/download_1750510382909.png" alt="Jaypee C. Consuelo" class="profile-picture">
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 glow-text">
+                    <span class="text-gradient">Jaypee C. Consuelo</span>
+                </h1>
+                <div class="text-xl md:text-2xl mb-8 h-16">
+                    <span class="typewriter font-mono" id="typewriter"></span>
+                </div>
+                <p class="text-lg md:text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+                    Dedicated AI Operations Assistant with 3+ years of experience in data-driven workflows, 
+                    automation, and AI-integrated systems optimization.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="btn-primary glow" onclick="scrollToSection('contact')">
+                        Get In Touch
+                    </button>
+                    <a href="resume.pdf" download class="btn-secondary">
+                        <i class="fas fa-download mr-2"></i>
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 left-10 float">
+            <div class="w-4 h-4 bg-blue-500 rounded-full opacity-60"></div>
+        </div>
+        <div class="absolute bottom-32 right-20 float-delayed">
+            <div class="w-6 h-6 bg-purple-500 rounded-full opacity-40"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient fade-in">About Me</h2>
+                <p class="text-xl text-muted-foreground fade-in">Professional Background & Expertise</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="card-hover bg-card p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-6 text-gradient">Professional Summary</h3>
+                        <p class="text-muted-foreground leading-relaxed mb-6">
+                            As a dedicated and detail-oriented AI Operations Assistant, I bring over 3 years of experience 
+                            supporting data-driven workflows and automation for business efficiency. My background in managing 
+                            AI-integrated systems, optimizing automation pipelines, and supporting technical operations has 
+                            sharpened my analytical mindset and precision.
+                        </p>
+                        <p class="text-muted-foreground leading-relaxed">
+                            I am skilled at identifying workflow bottlenecks, streamlining processes using AI tools, and 
+                            implementing quality control measures across data pipelines. I am committed to leveraging AI 
+                            technologies and operational strategies to drive continuous improvement and deliver high-impact 
+                            support to executive leadership and cross-functional teams.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <div class="space-y-6">
+                        <div class="card-hover bg-card p-6 rounded-xl">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-robot text-2xl text-blue-500 mr-4"></i>
+                                <h4 class="text-xl font-semibold">AI Operations</h4>
+                            </div>
+                            <p class="text-muted-foreground">Specialized in AI workflow automation, data scraping, and multi-agent systems.</p>
+                        </div>
+                        
+                        <div class="card-hover bg-card p-6 rounded-xl">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-headset text-2xl text-green-500 mr-4"></i>
+                                <h4 class="text-xl font-semibold">Technical Support</h4>
+                            </div>
+                            <p class="text-muted-foreground">95% satisfaction rate with 5,000+ annual support cases resolved.</p>
+                        </div>
+                        
+                        <div class="card-hover bg-card p-6 rounded-xl">
+                            <div class="flex items-center mb-4">
+                                <i class="fas fa-brain text-2xl text-purple-500 mr-4"></i>
+                                <h4 class="text-xl font-semibold">AI Training</h4>
+                            </div>
+                            <p class="text-muted-foreground">RLHF methodology expert for improving AI system performance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding bg-muted">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient fade-in">Skills & Technologies</h2>
+                <p class="text-xl text-muted-foreground fade-in">Technical Expertise & Proficiencies</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-8 text-center">Programming & Development</h3>
+                    <div class="space-y-6">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">JavaScript</span>
+                                <span class="text-muted-foreground">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Python</span>
+                                <span class="text-muted-foreground">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">HTML/CSS</span>
+                                <span class="text-muted-foreground">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">MySQL</span>
+                                <span class="text-muted-foreground">65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Node.js</span>
+                                <span class="text-muted-foreground">60%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold mb-8 text-center">Tools & Technologies</h3>
+                    <div class="space-y-6">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Adobe Creative Suite</span>
+                                <span class="text-muted-foreground">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">AI/ML Tools</span>
+                                <span class="text-muted-foreground">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Technical Support</span>
+                                <span class="text-muted-foreground">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Network Administration</span>
+                                <span class="text-muted-foreground">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Automation & Workflows</span>
+                                <span class="text-muted-foreground">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient fade-in">Work Experience</h2>
+                <p class="text-xl text-muted-foreground fade-in">Professional Journey & Achievements</p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-primary"></div>
+                
+                <!-- Experience Items -->
+                <div class="space-y-12">
+                    <!-- Current Role -->
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="card-hover bg-card p-6 rounded-xl">
+                                <div class="text-sm text-blue-400 font-mono mb-2">March 2025 - Present</div>
+                                <h3 class="text-xl font-bold mb-2">AI Operations Assistant</h3>
+                                <h4 class="text-lg text-muted-foreground mb-4">Insurance Support Services International Corporation</h4>
+                                <div class="text-sm text-muted-foreground mb-4">
+                                    <p class="mb-3 leading-relaxed">
+                                        Led the development of an end-to-end intelligent automation system by integrating AI agents, 
+                                        vector search technologies, and a low-code workflow platform to classify and organize 
+                                        unstructured inputs. The solution utilized dynamic agents and semantic search to power 
+                                        real-time classification workflows at scale.
+                                    </p>
+                                </div>
+                                <div class="mb-4">
+                                    <h5 class="text-sm font-semibold text-primary mb-2">Key Responsibilities:</h5>
+                                    <div class="text-xs text-muted-foreground space-y-2">
+                                        <p>Engineered modular workflows using n8n to automate data ingestion, processing, AI classification, and structured output generation.</p>
+                                        <p>Built AI agents to interpret natural language inputs and return standardized classification paths using LLMs.</p>
+                                        <p>Integrated semantic search capabilities through vector embeddings and similarity-matching vector database.</p>
+                                        <p>Developed document processing pipelines with automated file ingestion, text extraction, and batch indexing.</p>
+                                        <p>Utilized structured output parsers to enforce JSON schema compliance for downstream workflows.</p>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <h5 class="text-sm font-semibold text-green-400 mb-2">Tools & Technologies:</h5>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-blue-900 text-blue-300 text-xs rounded">n8n </span>
+                                        <span class="px-2 py-1 bg-purple-900 text-purple-300 text-xs rounded">OpenAI API</span>
+                                        <span class="px-2 py-1 bg-green-900 text-green-300 text-xs rounded">Vector DB </span>
+                                        <span class="px-2 py-1 bg-orange-900 text-orange-300 text-xs rounded">LangChain </span>
+                                        <span class="px-2 py-1 bg-indigo-900 text-indigo-300 text-xs rounded">Cloud APIs </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 class="text-sm font-semibold text-orange-400 mb-2">Impact:</h5>
+                                    <div class="text-xs text-muted-foreground space-y-2">
+                                        <p>Delivered fully automated classification engine reducing manual effort dramatically.</p>
+                                        <p>Enhanced AI accuracy through hierarchical matching and structured response parsing.</p>
+                                        <p>Enabled scalable, reusable AI agents for deployment across multiple projects.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full pulse-glow"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="relative ai-video-container">
+                                <video id="ai-video-1" class="w-full h-80 rounded-lg object-cover shadow-lg ai-operations-video" muted autoplay>
+                                    <source src="attached_assets/AI operations assistant_1750509365591.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <video id="ai-video-2" class="w-full h-80 rounded-lg object-cover shadow-lg ai-operations-video hidden" muted>
+                                    <source src="attached_assets/AI operations assistant 2_1750509365590.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- AI Trainer Role -->
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8">
+                            <div class="flex justify-center">
+                                <img src="attached_assets/AI Trainer and Evaluator_1750509365587.png" 
+                                     alt="AI Trainer Dashboard" 
+                                     class="w-full max-w-sm rounded-lg shadow-lg object-cover">
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="card-hover bg-card p-6 rounded-xl">
+                                <div class="text-sm text-purple-400 font-mono mb-2">October 2024 - March 2025</div>
+                                <h3 class="text-xl font-bold mb-2">AI Trainer and Writing Evaluator</h3>
+                                <h4 class="text-lg text-muted-foreground mb-4">Outlier.AI (Remote)</h4>
+                                <div class="text-sm text-muted-foreground space-y-2">
+                                    <p>Used RLHF method (Reinforcement Learning with Human Feedback) to help AI systems improve by learning from automated processes and human input.</p>
+                                    <p>Played a pivotal role in improving AI's ability to learn from real interactions, resulting in more accurate, human-like, and contextually relevant responses.</p>
+                                    <p>Designed and tested conversational scenarios to train AI systems for improved adaptability and relevance.</p>
+                                    <p>Authored realistic prompts to simulate real-world scenarios and enhance AI learning capabilities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Senior Technical Support -->
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="card-hover bg-card p-6 rounded-xl">
+                                <div class="text-sm text-green-400 font-mono mb-2">June 2022 - March 2025</div>
+                                <h3 class="text-xl font-bold mb-2">Senior Technical Support Specialist II</h3>
+                                <h4 class="text-lg text-muted-foreground mb-4">PartnerHero Philippines (Promethean)</h4>
+                                <div class="text-sm text-muted-foreground space-y-2">
+                                    <p>Delivered technical support to over 5,000 end-users annually, resolving issues related to interactive whiteboards, displays, Windows and Mac hardware and software issues with a 95% satisfaction rate.</p>
+                                    <p>Used Salesforce to log technical issues, track progress, and facilitate communication between support teams and end-users.</p>
+                                    <p>Recognized as the top global support specialist for 14 months in the past two years, demonstrating exceptional problem-solving skills and customer service excellence.</p>
+                                    <p>Conducted installation, configuration, and troubleshooting of Promethean hardware and software, leveraging engineering knowledge to optimize performance and resolve complex technical issues.</p>
+                                    <p>Diagnosed and resolved technical issues, including connectivity problems and software bugs, leading to a 30% improvement in average resolution time.</p>
+                                    <p>Collaborated with engineering and product development teams to provide feedback and recommendations, contributing to the successful rollout of three major software updates.</p>
+                                    <p>Mentored and trained new support team members, sharing expertise and best practices to elevate team performance and cohesion.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="flex justify-center">
+                                <video class="w-full max-w-sm h-64 rounded-lg shadow-lg technical-support-video" muted autoplay loop>
+                                    <source src="attached_assets/Techical Support_1750509365589.mov" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Customer Service -->
+                    <div class="timeline-item flex items-center">
+                        <div class="w-1/2 pr-8">
+                            <div class="flex justify-center">
+                                <video class="w-full max-w-sm h-64 rounded-lg shadow-lg customer-service-video" muted autoplay loop>
+                                    <source src="attached_assets/Customer Service Representative_1750509365588.mov" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-orange-500 rounded-full"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="card-hover bg-card p-6 rounded-xl">
+                                <div class="text-sm text-orange-400 font-mono mb-2">August 2021 - June 2022</div>
+                                <h3 class="text-xl font-bold mb-2">Customer Service Specialist</h3>
+                                <h4 class="text-lg text-muted-foreground mb-4">KMC Solutions (Catch.com.au)</h4>
+                                <div class="text-sm text-muted-foreground space-y-2">
+                                    <p>Delivered timely, accurate, and professional customer service to clients of one of Australia's largest online marketplaces, Catch.com.au.</p>
+                                    <p>Assisted customers with expediting orders, addressing post-sale issues, and resolving complaints, ensuring a seamless shopping experience.</p>
+                                    <p>Utilized advanced tools to manage customer accounts, review transactions, and provide effective solutions through phone, email, chat, and mobile chat.</p>
+                                    <p>Monitored, audited, and tracked the quality metrics of assigned processes to ensure compliance with company standards and enhance service delivery.</p>
+                                    <p>Recognized as the top associate for two consecutive months, demonstrating exceptional performance in customer service and issue resolution.</p>
+                                    <p>Adapted to a fast-paced environment by remaining flexible and action-oriented, consistently meeting performance targets and improving operational efficiency.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-muted">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gradient fade-in">Get In Touch</h2>
+                <p class="text-xl text-muted-foreground fade-in">Let's discuss your AI operations needs</p>
+            </div>
+            
+            <div class="grid md: flex justify-center items-center">
+                <div class="fade-in">
+                    <div class="card-hover bg-card p-8 rounded-xl">
+                        <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Email</p>
+                                    <p class="text-muted-foreground">jaypeeconsuelo@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Phone</p>
+                                    <p class="text-muted-foreground">+639104311155</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">Location</p>
+                                    <p class="text-muted-foreground">Pasay City, Philippines</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fab fa-linkedin text-white"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium">LinkedIn</p>
+                                    <a href="https://www.linkedin.com/in/jaypee-consuelo-450a41256/" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">linkedin.com/in/jaypee-consuelo-450a41256</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 pt-8 border-t border-border">
+                            <h4 class="text-lg font-semibold mb-4">Professional Highlights</h4>
+                            <div class="space-y-2 text-sm text-muted-foreground">
+                                <p>• 3+ years in AI Operations & Technical Support</p>
+                                <p>• 95% customer satisfaction rate</p>
+                                <p>• Top global specialist recognition</p>
+                                <p>• Expert in AI workflow automation</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <form class="card-hover bg-card p-8 rounded-xl" id="contact-form">
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-border">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-muted-foreground">
+                &copy; 2025 Jaypee C. Consuelo. Built with passion for AI Operations Excellence.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
